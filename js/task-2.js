@@ -1,11 +1,14 @@
 "use strict";
 function calcAverageCalories(days) {
     let totalSum = 0;
-    for (const day of days) {
-      totalSum += day.calories; 
-    }
+  for (const day of days) {
+    totalSum += day.calories; 
+  }
+  if (totalSum === 0) {
+      return 0
+    } 
     const averageRating = totalSum / days.length;
-    return averageRating; 
+    return averageRating;
 }
 
 
